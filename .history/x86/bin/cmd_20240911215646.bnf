@@ -1,0 +1,9 @@
+﻿#BNF+IAT 1.0 UTF-8;
+
+!grammar cmd;
+!slot <cmd>;
+!start <cmdstart>;
+
+<cmdstart>:<cmd>;
+
+<cmd>:相册!id(1)|视频!id(2)|上一张!id(11)|下一张!id(12)|开灯!id(3)|关灯!id(4)|打开蜂鸣器!id(5)|蜂鸣器!id(5)|关闭蜂鸣器!id(6)|打开摄像头!id(7)|摄像头!id(7)|关闭摄像头!id(8)|上一张!id(11)|下一张!id(12)|主界面!id(999)|退出!id(999)|返回!id(999);

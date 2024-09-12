@@ -1,0 +1,18 @@
+CC = arm-linux-gcc
+
+CPPFLAGS += -I ./inc
+CPPFLAGS += -I ./inc/libxml2
+LDFLAGS  += -L ./lib
+
+LDFLAGS += -lxml2
+LDFLAGS += -lz
+LDFLAGS += -lpthread
+
+main:voicectl.c common.c photo.c lcd.c control.c video.c camera.c lcd2.c v4l2.c convert.c
+	$(CC) $^ -o $@ $(CPPFLAGS) $(LDFLAGS) -Wall
+
+clean:
+	rm main -rf
+
+install:
+	cp voicectl ~/tftpboot

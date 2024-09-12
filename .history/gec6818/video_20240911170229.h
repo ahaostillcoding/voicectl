@@ -1,0 +1,10 @@
+#ifndef _MUSIC_H_
+#define _MUSIC_H_
+
+// int play_video();
+int *play_video(void *arg)
+void stop_video();
+void quit_video();
+
+#endif
+
